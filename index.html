@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quotes</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div class="w-screen h-screen flex items-center">
-      <div
-        class="flex justify-center items-center bg-gray-200 p-4 mx-auto space-y-4 w-1/2" id="mainContainer">
-        <button
-          class="rounded-md bg-green-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-          id="btn"
-        >
-          + Generate Quotes
-        </button>
-        <div id="container"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuoteSphere</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- NavBar -->
+    <nav class="fixed top-0 w-screen bg-green-800 text-white py-2">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">QuoteSphere</h1>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300">About</a></li>
+        </ul>
       </div>
+    </nav>
+  <!-- Home -->
+  <section id="home" class="py-16 bg-gray-50 flex flex-col">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Welcome to QuoteSphere</h2>
+      <p class="text-lg text-gray-700">"Discover Inspiration, One Quote at a Time"<br />
+        Bring motivation, wisdom, and positivity to your day with curated quotes from timeless thinkers, modern leaders,
+        and creative minds.. <br />Whether you're looking for a spark of motivation, a moment of laughter, or just a
+        wise perspective, you've come to the right place. Browse thousands of carefully selected quotes or generate a
+        random quote to brighten your day.</p>
+      <br />
+      <p>Click the button below to explore!</p>
+    </div>
+
+  </section>
+  <!-- About -->
+  <section id="about" class="py-16 bg-white flex flex-col">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">About QuoteSphere: <br />"Spreading Inspiration, One Quote at a Time"</h2>
+      <p class="text-lg text-gray-700">QuoteSphere is your go-to source for motivational and thought-provoking quotes.
+        Whether you need inspiration for your day or a touch of wisdom, we have you covered. <br />At QuoteSphere, we
+        believe that a single sentence can change your perspective, spark an idea, or uplift your spirit. Our platform
+        is designed to make inspiration accessible to everyone by curating thousands of quotes from the brightest minds
+        throughout history, modern icons, and unique thinkers.</p>
+    </div>
+  </section>
+  <!-- Main section -->
+  <section class="mb-10">
+    <div class="flex flex-col justify-center items-center bg-gray-200 p-6 mx-auto space-y-4 w-1/2 rounded-lg shadow-md"
+      id="mainContainer">
+      <h3 class="text-xl font-bold text-center">Click Here To Generate Quotes of the Day!</h3>
+      <button
+        class="rounded-md bg-green-800 px-6 py-3 w-3/4 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        id="btn">
+        + Generate Quotes
+      </button>
+
+    </div>
+    <div id="container mb-6"
+      class="flex flex justify-center items-center mx-auto p-6 h-1/6 w-1/2 rounded-lg shadow-mdtext-center mt-4 border bg-green-300">
+      <p id="quote" class="text-lg italic text-gray-700"></p>
+      <p id="author" class="text-sm text-gray-500 mt-2"></p>
+    </div>
+  </section>
+  <!-- Footer -->
+  <section>
+    <footer class="fixed w-screen bottom-0 bg-green-800 text-white py-1">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-xs">&copy; 2024 QuoteSphere. All rights reserved.</p>
       </div>
+    </footer>
+  </section>
 
 
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
